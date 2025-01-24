@@ -21,7 +21,7 @@ describe("Funcionalidade Calculadora de Orçamento", () => {
        // Ação: Calcular orçamento
         cy.contains('Calcular').click()
 
-        // Como usuário é menor de idade gera um alert impedindo a continuação
+        // Verifica se a idade do usuário, se for menor, gera um aviso impedindo o prosseguimento da ação
         cy.on('window:alert', (alert) => {
             expect(alert).to.equal('Você deve ter pelo menos 18 anos para fazer uma reserva.');
           });
@@ -39,10 +39,10 @@ describe("Funcionalidade Calculadora de Orçamento", () => {
             cy.get('#dataNascimento').type(usuarios.usuario2.dataNascimento)
         }); 
        
-       // Ação: Cálcula o orçamento
+       // Ação: Calcular orçamento
         cy.contains('Calcular').click()
 
-        // Calcula o orçamento da viagem
+        // Verifica se o resultado do orçamento esta correto
         cy.get('#resultadoOrcamento').should('contain','4600.00')
 
     });
