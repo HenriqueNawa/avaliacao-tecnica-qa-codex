@@ -1,0 +1,14 @@
+{
+    "usuario1": {
+      "valorPassagem": "100",
+      "numeroPessoas": "1",
+      "diasHospedagem": "7",
+      "dataNascimento": "2025-01-01"
+    },
+    "usuario2": {
+      "valorPassagem": "100",
+      "numeroPessoas": "1",
+      "diasHospedagem": "7",
+      "dataNascimento": "2000-01-01"
+    }
+  }
