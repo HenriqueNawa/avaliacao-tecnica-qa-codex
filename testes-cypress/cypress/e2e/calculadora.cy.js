@@ -18,7 +18,7 @@ describe("Funcionalidade Calculadora de Orçamento", () => {
         });
     
        
-       // Ação: Cálcula o orçamento
+       // Ação: Calcular orçamento
         cy.contains('Calcular').click()
 
         // Como usuário é menor de idade gera um alert impedindo a continuação
@@ -30,7 +30,7 @@ describe("Funcionalidade Calculadora de Orçamento", () => {
 
 
     // Caso de teste Positivo: Calcula o valor da reserva
-    it('Não permite menor de idade fazer reserva', () => {
+    it('Calcula o orçamento da viagem conforme os dados inseridos', () => {
         // Preenche as entradas para o cálculo do orçamento
         cy.fixture('calculadoraDados.json').then((usuarios) => {
             cy.get('#valorPassagem').type(usuarios.usuario2.valorPassagem) 
